@@ -21,3 +21,7 @@
     /* align-items: center; */
     flex-wrap: wrap;
 }
+
+.detail{
+    background-color: #3ac9c2;
+}

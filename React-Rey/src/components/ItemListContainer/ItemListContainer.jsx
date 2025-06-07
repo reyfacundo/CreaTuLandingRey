@@ -1,6 +1,6 @@
 import Item from "./Item";
 import products from "../../data/products.json";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import './product.css'
 import './ItemListContainer.css'
@@ -17,9 +17,21 @@ import './ItemListContainer.css'
 
 function ItemListContainer() {
 
+    const [items, setItems] = useState([]);
     const [category, setCategory] = useState("");
 
-    const filteredItems = category ? products.filter(item => item.category === category) : products;
+    useEffect(() =>{
+        const fetchProducts = new Promise((resolve)=>{
+            setTimeout(() =>{
+                resolve(products)
+            },1000)
+        });
+        fetchProducts.then((data) =>{
+            setItems(data)
+        })
+    },[])
+
+    const filteredItems = category ? items.filter(item => item.category === category) : items;
     
     return (
         <>
