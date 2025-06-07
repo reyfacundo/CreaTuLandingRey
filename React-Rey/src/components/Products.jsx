@@ -1,9 +1,7 @@
-import Item from "./Item";
-import products from "../../data/products.json";
-import { useState } from "react";
-
+import Product from "./Product";
 import './product.css'
-import './ItemListContainer.css'
+import products from "../data/products.json";
+import { useState } from "react";
 // import ItemListContainer from "./ItemListContainer/ItemListContainer";
 
     const categories = {
@@ -15,12 +13,12 @@ import './ItemListContainer.css'
     F: "Clothing",
 }
 
-function ItemListContainer() {
+function Products() {
 
     const [category, setCategory] = useState("");
 
     const filteredItems = category ? products.filter(item => item.category === category) : products;
-    
+
     return (
         <>
             <button onClick={() => setCategory(categories.A)}>{categories.A}</button>
@@ -32,11 +30,11 @@ function ItemListContainer() {
         <div id="container">
             {/* <ItemListContainer/> */}
             {filteredItems.map((prod) => (
-                <Item key={prod.id} {...prod} />
+                <Product key={prod.id} {...prod} />
             ))}
         </div>
         </>
     );
 }
 
-export default ItemListContainer
+export default Products

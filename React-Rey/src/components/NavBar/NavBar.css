@@ -2,7 +2,7 @@ body {
     background: url("../../assets/placeholder.jpg") no-repeat center center;
     background-size: cover;
     min-height: 100vh;
-    margin: 0 3vw;
+    /* margin: 0 3vw; */
 }
 
 header {
