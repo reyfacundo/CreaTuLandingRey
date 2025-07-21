@@ -1,6 +1,8 @@
 import "./NavBar.css";
 import logo from "../../assets/logo.png";
 import CartWidget from "./Cart/CartWidget";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
     return (
@@ -14,10 +16,10 @@ const Navbar = () => {
                         <span className="material-symbols-outlined">menu</span>
                     </span>
                     <ul className="tabs">
-                        <li>Home</li>
-                        <li>Comics</li>
-                        <li>Games</li>
-                        <li>About</li>
+                        <Link to={"/"}> Home </Link>
+                        <Link to={"/products"}> Products </Link>
+                        {/* <li>Games</li>
+                        <li>About</li> */}
                     </ul>
                 </div>
                 <div className="right">
@@ -32,7 +34,7 @@ const Navbar = () => {
                             </span>
                         </div>
                     </div>
-                    <div className="cartContainer">
+                    {/* <div className="cartContainer">
                         <span className="searchMobile">
                             <span className="material-symbols-outlined">
                                 search
@@ -41,8 +43,8 @@ const Navbar = () => {
                         <span className="material-symbols-outlined">
                             shopping_cart
                         </span>
-                        <span className="cartQuantity">1</span>
-                    </div>
+                        <span className="cartQuantity">0</span>
+                    </div> */}
                     <CartWidget />
                 </div>
             </nav>

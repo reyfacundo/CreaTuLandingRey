@@ -1,7 +1,7 @@
 function Home() {
     return (
         <div>
-            <h1>hiiii</h1>
+            <h1>Test</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore ipsum voluptates ut consequuntur suscipit modi adipisci, molestias aut aperiam, et in accusamus assumenda. Ut voluptatibus magnam excepturi. Voluptatem, veniam quisquam!
             Blanditiis odio ducimus sint odit enim, aspernatur obcaecati quas laudantium reiciendis voluptatum qui explicabo perferendis reprehenderit ullam similique dignissimos totam? Eaque, quasi! Voluptate amet ratione dicta, accusamus laboriosam tempora ullam.
             Natus assumenda tenetur exercitationem sapiente esse harum totam facere optio fugit. Eos rerum enim officiis nobis doloribus saepe aut illum libero amet dolor? Laborum, soluta architecto? Explicabo neque a inventore.

@@ -1,9 +1,10 @@
 import { Link, Outlet } from "react-router-dom";
+import Navbar from "./NavBar/NavBar";
 
 function Layout() {
     return (
         <>
-            <nav>
+            {/* <nav>
                 <ul>
                     <li>
                         <Link to={"/"}> Home </Link>
@@ -11,11 +12,9 @@ function Layout() {
                     <li>
                         <Link to={"/products"}> Products </Link>
                     </li>
-                    {/* <li>
-                        <Link to={"/about"}> About Us </Link>
-                    </li> */}
                 </ul>
-            </nav>
+            </nav> */}
+            <Navbar/>
             <Outlet />
         </>
     );

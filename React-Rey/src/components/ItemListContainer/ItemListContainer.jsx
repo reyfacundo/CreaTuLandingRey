@@ -2,7 +2,7 @@ import Item from "./Item";
 import products from "../../data/products.json";
 import { useState, useEffect } from "react";
 
-import './product.css'
+// import './product.css'
 import './ItemListContainer.css'
 // import ItemListContainer from "./ItemListContainer/ItemListContainer";
 

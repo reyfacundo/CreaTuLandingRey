@@ -1,0 +1,96 @@
+.cartCardContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.purchase{
+    background-color: rgb(255, 255, 83);
+    cursor: pointer;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    border-radius: 0 0 10px 10px;
+}
+.purchase > * {
+    font-size: 1.4rem;
+}
+.purchase:hover{
+    filter: brightness(90%);
+}
+
+.cardContainer{
+    background-color: rgb(88, 88, 88);
+    border-radius: 10px 10px 0 0;
+    min-height: 40vh;
+    max-height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    width: 40%;
+    overflow: auto;
+    overflow-x: hidden;
+    padding: 20px;
+}
+.cardContainer::-webkit-scrollbar {
+    width: 10px;
+}
+.cardContainer::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.cardContainer::-webkit-scrollbar-thumb {
+    background: #888;
+}
+.cardContainer::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.cartCard{
+    background-color: rgb(24, 24, 24);
+    width: 85%;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.cartCard > *{
+    text-decoration: none;
+}
+.cartCard:hover{
+    scale: 1.01;
+}
+.cartCard span:nth-child(1) > *{
+        color: rgb(255, 226, 99);
+}
+.cartCard h2:nth-child(1){
+    font-size: 1.4rem;
+}
+.cartCard h3{
+    font-size: 1rem;
+    color: rgb(255, 255, 185);
+}
+.productData{
+    width: 100%;
+}
+.deleteProduct{
+    background-color: rgb(255, 71, 71);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0 15px 0 15px;
+    cursor: pointer;
+}
+.deleteProduct:hover{
+    filter: brightness(90%);
+}
+.deleteProduct span{
+    color: rgb(221, 221, 221);
+}

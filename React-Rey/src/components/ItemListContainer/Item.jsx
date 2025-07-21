@@ -6,7 +6,7 @@ function Item({ name, description, price, id }) {
         <Link to={`/products/${id}`} className="card">
             <h2>{name}</h2>
             <h3>{description}</h3>
-            <h2>{price}</h2>
+            <h2>${price}</h2>
         </Link>
     );
 }
