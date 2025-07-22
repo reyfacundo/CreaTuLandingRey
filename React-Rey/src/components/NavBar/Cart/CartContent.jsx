@@ -5,7 +5,6 @@ import "./Cart.css";
 
 const CartContent = () => {
     const { products, deleteProduct } = useContext(cartContext);
-    console.log(products);
 
     if (products.length == 0) {
         return (
@@ -29,11 +28,12 @@ const CartContent = () => {
                             className="productData"
                         >
                             <span>
-                                <h2>{prod.product.name}</h2>
+                                <h2>{prod.product.title}</h2>
                                 <h2>${prod.product.price}</h2>
                                 <h3>QUANTITY: {prod.quantity}</h3>
                             </span>
                         </Link>
+                        {/* <img className="cartImg" src={prod.product.imageId} alt="" /> */}
                         <span
                             className="deleteProduct"
                             onClick={() => deleteProduct(prod.product)}

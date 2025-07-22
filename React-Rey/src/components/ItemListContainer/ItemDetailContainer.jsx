@@ -49,6 +49,7 @@ const ItemDetailContainer = () => {
         <div className="DetailContainer">
             <div className="Detail">
                 <h2>{data.title}</h2>
+                <img src={data.imageId} alt="" />
                 <p>{data.description}</p>
                 <h2>${data.price}</h2>
                 <div className="prod-actions">

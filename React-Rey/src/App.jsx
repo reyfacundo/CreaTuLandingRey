@@ -17,17 +17,6 @@ import CartContent from "./components/NavBar/Cart/CartContent";
 import Error from "./components/Error";
 
 function App() {
-    // const [data, setData] = useState({});
-    // const db = getFirestore();
-    // useEffect(()=>{
-    //     const itemRef = doc(db, "products", "JNxyGqzTUe2PFvTqYLt6");
-    //     getDoc(itemRef).then(snapshot => {
-    //         console.log(snapshot);
-    //         console.log(snapshot.data);
-    //         setData(snapshot.data());
-    //     });
-
-    // },[])
     const [quantity, setQuantity] = useState(0);
     const [products, setProducts] = useState([]);
     const addProduct = (product, q) => {
