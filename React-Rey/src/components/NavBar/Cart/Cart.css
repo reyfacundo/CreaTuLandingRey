@@ -19,11 +19,17 @@
 .purchase:hover{
     filter: brightness(90%);
 }
-
+#cartLink{    
+    text-decoration: none;
+}
+.emptyCart{
+    color: white;
+    margin: 0 auto;
+}
 .cardContainer{
-    background-color: rgb(88, 88, 88);
+    background-color: rgb(73, 73, 73);
     border-radius: 10px 10px 0 0;
-    min-height: 40vh;
+    min-height: fit-content;
     max-height: 70vh;
     display: flex;
     align-items: center;
@@ -32,7 +38,7 @@
     width: 40%;
     overflow: auto;
     overflow-x: hidden;
-    padding: 20px;
+    padding: 30px;
 }
 .cardContainer::-webkit-scrollbar {
     width: 10px;

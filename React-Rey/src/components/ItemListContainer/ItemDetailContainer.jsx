@@ -1,61 +1,76 @@
-import products from '../../data/products.json';
-import { useContext } from 'react';
-import cartContext from '../context';
+// import products from "../../data/products.json";
+import { useContext } from "react";
+import cartContext from "../context";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 
-import './product.css'
+import "./product.css";
 
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-
     const { addProduct } = useContext(cartContext);
-    const [items, setItems] = useState([]);
+    // const [item, setItem] = useState();
+    const [data, setData] = useState();
     const [count, setCount] = useState(1);
 
-    useEffect(() => {
-        const fetchProducts = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(products)
-            }, 1000)
+    const { id } = useParams();
+    
+    const db = getFirestore();
+    useEffect(()=>{
+        const itemRef = doc(db, "products", id);
+        getDoc(itemRef).then(snapshot => {
+            setData({ id: id, ...snapshot.data() });
         });
-        fetchProducts.then((data) => {
-            setItems(data)
-        })
-    }, [])
+    },[id,db]);
+    // useEffect(() => {
+    //     const fetchProducts = new Promise((resolve) => {
+    //         setTimeout(() => {
+    //             resolve(products);
+    //         }, 1000);
+    //     });
+    //     fetchProducts.then((data) => {
+    //         setItems(data);
+    //     });
+    // }, []);
 
-    const { id } = useParams()
-    const product = items.find(prod => prod.id === +id);
+    // const { id } = useParams();
+    // const product = items.find((prod) => prod.id === +id);
 
-    if (!product) {
-        return <h2>The selected product doesn't exist.</h2>
+    if (data == undefined) {
+        return (
+            <span className="material-symbols-outlined loader">
+                hourglass_bottom
+            </span>
+        );
     }
 
     return (
         <div className="DetailContainer">
-            <div className='Detail'>
-                <h2>{product.name}</h2>
-                <p>{product.description}</p>
-                <h2>${product.price}</h2>
+            <div className="Detail">
+                <h2>{data.title}</h2>
+                <p>{data.description}</p>
+                <h2>${data.price}</h2>
                 <div className="prod-actions">
                     <div className="quantity">
                         <button
                             onClick={() => {
-                                if (count > 1) setCount(count - 1)
+                                if (count > 1) setCount(count - 1);
                             }}
                         >
                             -
                         </button>
-                        <p id='counter'>
-                            {count}
-                        </p>
-                        <button onClick={() => {
-                            if(count < product.stock) setCount((count) => count + 1)
-                            }}>
+                        <p id="counter">{count}</p>
+                        <button
+                            onClick={() => {
+                                if (count < data.stock)
+                                    setCount((count) => count + 1);
+                            }}
+                        >
                             +
                         </button>
                     </div>
-                    <button onClick={() => addProduct(product, count)}>
+                    <button onClick={() => addProduct(data, count)}>
                         <span className="material-symbols-outlined">
                             add_shopping_cart
                         </span>
@@ -64,6 +79,6 @@ const ItemDetailContainer = () => {
             </div>
         </div>
     );
-}
+};
 
 export default ItemDetailContainer;

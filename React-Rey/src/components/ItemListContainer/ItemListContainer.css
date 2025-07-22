@@ -4,8 +4,23 @@ h2 {
     letter-spacing: 1px;
     font-size: 1.2rem;
 }
+button{
+    background-color: rgb(66, 66, 66);
+    border: none;
+    color: white;
+    padding: 10px;
+    /* border-radius: 0 10px 0 0; */
+    /* margin-right: 10px; */
+    border: #1f1f1f 1px solid;
+    cursor: pointer;
+}
+button:hover{
+    filter: brightness(0.9);
+}
 .card{
-    background-color: #d46657;
+    text-decoration: none;
+    color: black;
+    background-color: #f1ea7b;
     width: 320px;
     min-height: 200px;
     margin: 10px;
@@ -21,7 +36,9 @@ h2 {
     transform: scale(1.008);
 }
 #container{
-    border: 2px solid red;
+    border: 2px solid rgb(71, 71, 71);
+    border-radius: 0 10px 10px 10px;
+    background-color: #535353;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

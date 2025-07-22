@@ -3,13 +3,22 @@
     background-color: #3ac9c2;
 } */
 
+.loader{
+    /* background-color: red; */
+    color: rgb(41, 41, 41);
+    position: absolute;
+    right: 50%;
+    top:45%;
+    font-size: 4rem;
+}
+
 .Detail{
     color: rgb(255, 255, 80);
     background-color: #242121;
     border: 2px solid rgba(0, 0, 0, 0.144);
     border-radius: 10px;
     /* height: 100vh; */
-    /* width: 50%; */
+    width: 400px;
     display: flex;
     padding: 30px;
     flex-direction: column;
