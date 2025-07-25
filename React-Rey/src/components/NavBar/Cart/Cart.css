@@ -1,10 +1,10 @@
-.cartCardContainer{
+.cartCardContainer {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-.purchase{
+.purchase {
     background-color: rgb(255, 255, 83);
     cursor: pointer;
     padding: 20px;
@@ -16,20 +16,65 @@
 .purchase > * {
     font-size: 1.4rem;
 }
-.purchase:hover{
+.purchase:hover {
     filter: brightness(90%);
 }
-#cartLink{    
+#cartLink {
     text-decoration: none;
 }
-.emptyCart{
+.emptyCart {
     color: white;
     margin: 0 auto;
 }
 /* .cartImg{
     width: 100px;
 } */
-.cardContainer{
+.hidden {
+    display: none !important;
+}
+.order{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 45%;
+    background-color: rgb(255, 237, 77);
+    height: 20vh;
+    width: 50vw;
+    box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.658);
+    border-radius: 10px;
+}
+.order h2{
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+.order h3 span{
+    color: rgb(255, 82, 82);
+    font-size: 1.8rem;
+}
+.order div{
+    position: absolute;
+    top: 7px;
+    right: 20px;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    cursor: pointer;
+    color:  rgb(255, 82, 82);
+}
+.total {
+    background-color: rgb(224, 224, 224);
+    width: 40%;
+    /* border: 2px solid #424242; */
+    text-align: center;
+    color: #272727;
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+.cardContainer {
     background-color: rgb(73, 73, 73);
     border-radius: 10px 10px 0 0;
     min-height: fit-content;
@@ -55,7 +100,7 @@
 .cardContainer::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-.cartCard{
+.cartCard {
     background-color: rgb(24, 24, 24);
     width: 85%;
     padding: 20px;
@@ -65,26 +110,26 @@
     align-items: center;
     position: relative;
 }
-.cartCard > *{
+.cartCard > * {
     text-decoration: none;
 }
-.cartCard:hover{
+.cartCard:hover {
     scale: 1.01;
 }
-.cartCard span:nth-child(1) > *{
-        color: rgb(255, 226, 99);
+.cartCard span:nth-child(1) > * {
+    color: rgb(255, 226, 99);
 }
-.cartCard h2:nth-child(1){
+.cartCard h2:nth-child(1) {
     font-size: 1.4rem;
 }
-.cartCard h3{
+.cartCard h3 {
     font-size: 1rem;
     color: rgb(255, 255, 185);
 }
-.productData{
+.productData {
     width: 100%;
 }
-.deleteProduct{
+.deleteProduct {
     background-color: rgb(255, 71, 71);
     height: 100%;
     display: flex;
@@ -97,9 +142,9 @@
     padding: 0 15px 0 15px;
     cursor: pointer;
 }
-.deleteProduct:hover{
+.deleteProduct:hover {
     filter: brightness(90%);
 }
-.deleteProduct span{
+.deleteProduct span {
     color: rgb(221, 221, 221);
 }
